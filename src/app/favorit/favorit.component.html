@@ -1,0 +1,10 @@
+<p *ngFor="let favHotel of favHotels$ | async; even as myEven"
+   [ngClass]="{ 'list-even-row' : myEven }"
+>
+    <span [style.font-size.px]="14">
+        {{ favHotel.title }} {{ favHotel.stars }}*
+    </span>
+    <button (click)="removeHotelFromFav(favHotel)">
+        X
+    </button>
+</p>
